@@ -58,30 +58,47 @@ nav a:hover {
 }
 
 /* BUTTONS */
+/* BUTTONS */
 .buttons {
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-.btn {
-  background: linear-gradient(45deg, #6366f1, #a78bfa);
-  color: white;
-  padding: 12px 25px;
+/* COMMON STYLE */
+.btn, .btn-outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 180px;        /* fixed width */
+  height: 45px;        /* fixed height */
+
   border-radius: 8px;
-  margin: 10px;
+  font-size: 14px;
   text-decoration: none;
   transition: 0.3s;
 }
 
-.btn:hover {
-  transform: scale(1.05);
+/* PRIMARY BUTTON */
+.btn {
+  background: linear-gradient(45deg, #6366f1, #a78bfa);
+  color: white;
+  border: none;
 }
 
+/* OUTLINE BUTTON */
 .btn-outline {
   border: 1px solid #a78bfa;
-  padding: 12px 25px;
-  border-radius: 8px;
   color: #a78bfa;
-  text-decoration: none;
+  background: transparent;
+}
+
+/* HOVER */
+.btn:hover, .btn-outline:hover {
+  transform: scale(1.05);
 }
 
 /* SECTIONS */
@@ -218,12 +235,25 @@ contact a {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+#typing {
+  min-height: 50px;
+}
 /* MOBILE */
 @media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
 
   header {
     flex-direction: column;
-    padding: 15px;
+    text-align: center;
   }
 
   nav {
@@ -231,10 +261,34 @@ contact a {
   }
 
   section {
-    padding: 40px 20px;
+    padding: 30px 20px;
+  }
+
+  .hero {
+    padding: 90px 15px 60px;
   }
 
   .hero h1 {
-    font-size: 30px;
+    font-size: 26px;
+    line-height: 1.3;
   }
+
+  .hero h2 {
+    font-size: 18px;
+    margin-top: 8px;
+  }
+
+  .hero p {
+    font-size: 13px;
+    margin: 12px 0;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn, .btn-outline {
+    width: 85%;
+  }
+
 }

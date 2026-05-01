@@ -29,10 +29,23 @@ nav a {
   color: #38bdf8;
 }
 
+.buttons {
+  margin-top: 20px;
+}
+
 .btn {
   padding: 12px 25px;
   background: #38bdf8;
   color: black;
+  border-radius: 8px;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.btn-outline {
+  padding: 12px 25px;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
   border-radius: 8px;
   text-decoration: none;
 }
@@ -49,9 +62,9 @@ section {
   transition: 0.3s;
 }
 
-.card: hover {
-  transform: translateY(-5px);
-  background: rgba(255,255,255,0.1);
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
 }
 
 .skills span {
@@ -60,9 +73,4 @@ section {
   padding: 10px;
   background: #1e293b;
   border-radius: 8px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
 }

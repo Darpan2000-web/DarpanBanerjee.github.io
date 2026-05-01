@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Darpan Banerjee | Portfolio</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -38,14 +39,29 @@
 <!-- ABOUT -->
 <section id="about">
   <h2>About Me</h2>
-  <p>
-    Computer Science postgraduate with strong expertise in Data Analysis, Python development, and Machine Learning.
-    Experienced in working with large datasets (250K+ records), building predictive models, and developing scalable web applications using Flask.
-
-    Currently working as a Python Trainer and Data Analyst, delivering hands-on training in Pandas, NumPy, and Scikit-learn while solving real-world data problems.
-
-    Passionate about transforming raw data into actionable insights and building data-driven solutions that support business decision-making.
+  <p class="about-intro">
+    Computer Science postgraduate (M.Sc.) with strong expertise in 
+    <span>Data Analysis</span>, <span>Python Development</span>, and <span>Machine Learning</span>. 
+    Qualified <span>TCS NQT (2026)</span> with a score of <span>71.36%</span>.
   </p>
+
+  <div class="about-grid">
+
+    <div class="about-box">
+      <h3>📊 Data Analysis</h3>
+      <p>Worked with 250K+ records, performed EDA, and derived insights to support decision-making.</p>
+    </div>
+
+    <div class="about-box">
+      <h3>💻 Development</h3>
+      <p>Developed full-stack applications including an Academic ERP system and a Weather Data Pipeline using Flask, SQL, and APIs.</p>
+    </div>
+
+    <div class="about-box">
+      <h3>📈 Machine Learning</h3>
+      <p>Built predictive models and identified key factors affecting salary based on education, experience, and job role.</p>
+    </div>
+
 </section>
 
 <!-- PROJECTS -->
@@ -55,30 +71,40 @@
   <div class="card">
     <h3>Academic ERP Management System</h3>
     <p>Full-stack Flask ERP system for student management, attendance, and reporting with CRUD operations.</p>
+    <p>Technologies: Flask, SQLAlchemy, SQLite, HTML/CSS</p>
+    <p>Designed and developed a full-stack Academic ERP application to streamline student record management,attendance tracking, and departmental operations. </p>
     <a href="https://github.com/Darpan2000-web/academic-erp-system">View Project</a>
   </div>
 
   <div class="card">
     <h3>Automation Testing Framework</h3>
     <p>Python Selenium framework with PyTest, POM structure, and automated test reporting.</p>
+    <p>Technologies: Python, Selenium, PyTest, HTML/CSS</p>
+     <p>Designed and implemented a robust automation testing framework using Python and Selenium, following the Page Object Model (POM) design pattern. The framework includes comprehensive test cases for web applications, automated test execution, and generates detailed HTML reports for test results.</p> 
     <a href="https://github.com/Darpan2000-web/automation-testing-framework">View Project</a>
   </div>
 
   <div class="card">
     <h3>Salary Analysis System</h3>
     <p>Analyzed 250K+ records using EDA and statistical testing.</p>
+    <p>Technologies: Python, Pandas, Matplotlib, Seaborn</p>
+     <p>Conducted an in-depth salary analysis using a dataset of over 250,000 records. Performed exploratory data analysis (EDA) to identify trends and patterns in salary distribution across different industries, job roles, and experience levels. Utilized statistical testing to determine the significance of various factors influencing salary outcomes.</p> 
     <a href="https://github.com/Darpan2000-web/Salary-Analysis-Career-Recommendation-System">View Project</a>
   </div>
 
   <div class="card">
     <h3>Weather Data Pipeline</h3>
     <p>ETL pipeline using Flask, API, and SQLite.</p>
+    <p>Technologies: Flask, SQLite, API Integration</p>
+     <p>Designed and implemented a weather data pipeline that extracts real-time weather data from a public API, transforms it for analysis, and loads it into a SQLite database. The pipeline is built using Flask for the web interface and includes automated data retrieval and storage processes.</p>  
     <a href="https://github.com/Darpan2000-web/weather-data-pipeline">View Project</a>
   </div>
 
   <div class="card">
     <h3>House Price Prediction</h3>
     <p>Machine learning model with R² score of 0.67.</p>
+    <p>Technologies: Python, Scikit-learn, Pandas, NumPy</p>
+     <p>Developed a machine learning model to predict house prices based on various features such as location, size, and amenities. The model achieved an R² score of 0.67, indicating a good fit for the data. The project involved data preprocessing, feature engineering, model training, and evaluation.</p> 
     <a href="https://github.com/Darpan2000-web/House_Price_Prediction_Project">View Project</a>
   </div>
 
@@ -102,24 +128,22 @@
 <section id="experience">
   <h2>Experience</h2>
 
-  <div class="card">
-    <h3>Python Trainer & Data Analyst</h3>
-    <p>ABS Academy (2025 – Present)</p>
-    <ul>
-      <li>Delivered training in Data Analysis and Machine Learning</li>
-      <li>Worked on real-world datasets for insights</li>
-      <li>Developed ERP system</li>
-    </ul>
-  </div>
+<div class="card">
+  <h2>Python Trainer & Data Analyst</h2>
+  <p class="company">ABS Academy (2025 – Present)</p>
 
-  <div class="card">
-    <h3>Network Administrator</h3>
-    <p>TCS Examination Centre (2025 – Present)</p>
-    <ul>
-      <li>Managed large-scale network infrastructure</li>
-      <li>Ensured zero downtime operations</li>
-    </ul>
-  </div>
+  <p>Delivered training in Data Analysis and Machine Learning</p>
+  <p>Worked on real-world datasets for insights</p>
+  <p>Developed ERP system</p>
+</div>
+
+<div class="card">
+  <h2>Network Administrator</h2>
+  <p class="company">TCS Examination Centre (2025 – Present)</p>
+
+  <p>Managed large-scale network infrastructure</p>
+  <p>Ensured zero downtime operations</p>
+</div>
 
 </section>
 
@@ -129,10 +153,10 @@
   <div class="card">
     <p><strong>M.Sc. in Computer Science</strong> (CGPA: 8.88/10)</p>
     <p>Sidho-Kanho-Birsha University, Purulia</p>
-
+<br>
     <p><strong>B.Sc. in Computer Science</strong> (SGPA: 8.87/10)</p>
     <p>Manbhum Mahavidyalaya, Purulia</p>
-
+<br>
     <p><strong>TCS NQT 2026:</strong> 71.36%</p>
   </div>
 </section>
@@ -144,6 +168,7 @@
     <p>Diploma in IT (12 Months)</p>
     <p>Mathematics in Deep Learning</p>
     <p>Data Analysis using Python</p>
+    <p>Network Administrator(TCS)</p>
   </div>
 </section>
 
@@ -152,8 +177,15 @@
   <h2>Contact</h2>
   <p>Email: darpanbanerjee18@gmail.com</p>
   <p>
-    <a href="https://github.com/Darpan2000-web">GitHub</a> |
-    <a href="https://linkedin.com/in/darpanbanerjee">LinkedIn</a>
+<div class="social-icons">
+  <a href="https://github.com/Darpan2000-web" target="_blank">
+    <i class="fab fa-github"></i>
+  </a>
+
+  <a href="https://linkedin.com/in/darpanbanerjee" target="_blank">
+    <i class="fab fa-linkedin"></i>
+  </a>
+</div>
   </p>
 </section>
 

@@ -1,21 +1,30 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Darpan Banerjee | Portfolio</title>
+
 <link rel="stylesheet" href="style.css">
+
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
 
+<div class="bg"></div>
+
 <header>
-  <h2>Darpan Banerjee</h2>
+  <h2>Darpan</h2>
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
     <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#certifications">Certificates</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -23,99 +32,60 @@
 <section class="hero">
   <h1 id="typing"></h1>
   <h2>Data Analyst | Python Developer</h2>
-  <p>
-    Transforming raw data into actionable insights using Python, SQL, and Machine Learning.
-  </p>
+  <p>Turning data into insights & building real-world solutions</p>
 
   <div class="buttons">
-    <a href="#projects" class="btn">View Projects</a>
+    <a href="#projects" class="btn">View Work</a>
     <a href="#contact" class="btn">Hire Me</a>
-    <a href="resume.pdf" download class="btn-outline">Download Resume</a>
+    <a href="resume.pdf" download class="btn-outline">Resume</a>
   </div>
 </section>
 
-<section id="about">
+<section id="about" data-aos="fade-up">
   <h2>About Me</h2>
   <p>
-    Computer Science postgraduate with hands-on experience in Data Analysis, Machine Learning, and backend development.
-    Worked with 250K+ datasets, built predictive models, dashboards, and real-world applications.
-    Currently working as a Python Trainer and Data Analyst.
+    Computer Science postgraduate specializing in Data Analysis, Machine Learning, and Python development.
+    Experienced in building scalable applications and working with large datasets to extract meaningful insights.
   </p>
 </section>
 
 <section id="projects">
-  <h2>Featured Projects</h2>
+  <h2 data-aos="fade-up">Projects</h2>
 
-  <div class="card">
-    <h3>Salary Analysis System</h3>
-    <p>Analyzed 250K+ records using EDA and statistical testing.</p>
-    <a href="https://github.com/Darpan2000-web/Salary-Analysis-Career-Recommendation-System">View Project</a>
+  <div class="card" data-aos="zoom-in">
+    <h3>Academic ERP System</h3>
+    <p>Full-stack Flask system with CRUD + reporting.</p>
+    <a href="https://github.com/Darpan2000-web/academic-erp-system">View</a>
   </div>
 
-  <div class="card">
-    <h3>Weather Data Pipeline</h3>
-    <p>ETL pipeline with Flask, API, and SQLite database.</p>
-    <a href="https://github.com/Darpan2000-web/weather-data-pipeline">View Project</a>
+  <div class="card" data-aos="zoom-in">
+    <h3>Automation Testing Framework</h3>
+    <p>Selenium + PyTest automation system.</p>
+    <a href="https://github.com/Darpan2000-web/automation-testing-framework">View</a>
   </div>
 
-  <div class="card">
-    <h3>House Price Prediction</h3>
-    <p>ML model with R² score of 0.67.</p>
-    <a href="https://github.com/Darpan2000-web/House_Price_Prediction_Project">View Project</a>
-  </div>
-
-  <div class="card">
-    <h3>Sales Dashboard</h3>
-    <p>Power BI dashboard analyzing 230M+ sales.</p>
-    <a href="https://github.com/Darpan2000-web/Sales-Data-Analysis-for-a-Retail-Store">View Project</a>
+  <div class="card" data-aos="zoom-in">
+    <h3>Salary Analysis</h3>
+    <p>250K+ dataset EDA + statistical insights.</p>
   </div>
 
 </section>
 
-<section id="skills">
+<section id="skills" data-aos="fade-up">
   <h2>Skills</h2>
   <div class="skills">
     <span>Python</span>
     <span>SQL</span>
     <span>Pandas</span>
-    <span>NumPy</span>
-    <span>Scikit-learn</span>
-    <span>Power BI</span>
+    <span>ML</span>
     <span>Flask</span>
+    <span>Power BI</span>
   </div>
 </section>
 
-<section id="experience">
-  <h2>Experience</h2>
-
-  <div class="card">
-    <h3>Python Trainer & Data Analyst</h3>
-    <p>ABS Academy (2025 – Present)</p>
-    <ul>
-      <li>Teach Data Analysis & ML</li>
-      <li>Work with real datasets</li>
-      <li>Develop ERP system</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Network Administrator</h3>
-    <p>TCS Exam Centre (2025 – Present)</p>
-    <ul>
-      <li>Managed network systems</li>
-      <li>Ensured zero downtime</li>
-    </ul>
-  </div>
-
-</section>
-
-<section id="contact">
+<section id="contact" data-aos="fade-up">
   <h2>Contact</h2>
-  <p>Email: darpanbanerjee18@gmail.com</p>
-  <p>
-    <a href="https://github.com/Darpan2000-web">GitHub</a> |
-    <a href="https://linkedin.com/in/darpanbanerjee">LinkedIn</a>
-  </p>
+  <p>darpanbanerjee18@gmail.com</p>
 </section>
 
 <footer>
@@ -123,6 +93,11 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init();
+</script>
 
 </body>
 </html>

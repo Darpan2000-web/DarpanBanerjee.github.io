@@ -122,6 +122,11 @@ h2 {
   background: #1e293b;
   border-radius: 6px;
 }
+.experience .card {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
 
 /* CONTACT ICONS */
 .social-icons {
@@ -147,7 +152,72 @@ footer {
   background: rgba(15, 23, 42, 0.8);
   border-top: 1px solid rgba(255,255,255,0.05);
 }
+contact a {
+  color: #cfc4ed;
+  text-decoration: none;
+}
+.card p {
+  margin: 6px 0;
+}
 
+.company {
+  color: #a78bfa;
+  font-weight: 500;
+}
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  font-size: 26px;
+  margin: 0 10px;
+  color: #e2e8f0;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #38bdf8;
+  transform: scale(1.2);
+}
+.about-intro {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #cbd5f5;
+}
+
+.about-intro span {
+  color: #a78bfa;
+  font-weight: bold;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.about-box {
+  background: rgba(30, 41, 59, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.about-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(167,139,250,0.4);
+}
+
+.about-box h3 {
+  color: #38bdf8;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 /* MOBILE */
 @media (max-width: 768px) {
 

@@ -1,4 +1,4 @@
-const texts = ["Hi, I'm Darpan Banerjee", "Data Analyst", "Python Developer"];
+const texts = ["Hi, I'm Darpan", "Data Analyst", "Python Developer"];
 let count = 0;
 let index = 0;
 let currentText = "";

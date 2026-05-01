@@ -1,34 +1,26 @@
 const texts = ["Hi, I'm Darpan Banerjee", "Data Analyst", "Python Developer"];
-let i = 0;
-let j = 0;
-let current = "";
-let isDeleting = false;
+let count = 0;
+let index = 0;
+let currentText = '';
+let letter = '';
 
 function type() {
-  if (i < texts.length) {
-    if (!isDeleting && j <= texts[i].length) {
-      current = texts[i].substring(0, j++);
-    } else if (isDeleting && j >= 0) {
-      current = texts[i].substring(0, j--);
-    }
-
-    document.getElementById("typing").textContent = current;
-
-    if (j === texts[i].length) {
-      isDeleting = true;
-      setTimeout(type, 1000);
-      return;
-    }
-
-    if (j === 0) {
-      isDeleting = false;
-      i++;
-    }
-  } else {
-    i = 0;
+  if (count === texts.length) {
+    count = 0;
   }
 
-  setTimeout(type, isDeleting ? 30 : 50);
+  currentText = texts[count];
+  letter = currentText.slice(0, ++index);
+
+  document.getElementById('typing').textContent = letter;
+
+  if (letter.length === currentText.length) {
+    count++;
+    index = 0;
+    setTimeout(type, 1000);
+  } else {
+    setTimeout(type, 50);
+  }
 }
 
 type();

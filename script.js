@@ -1,19 +1,27 @@
 const texts = ["Hi, I'm Darpan", "Data Analyst", "Python Developer"];
 let count = 0;
 let index = 0;
+let currentText = "";
+let letter = "";
 
 function type() {
-  let current = texts[count];
-  let display = current.slice(0, index++);
+  if (count === texts.length) {
+    count = 0;
+  }
 
-  document.getElementById("typing").textContent = display;
+  currentText = texts[count];
+  letter = currentText.slice(0, ++index);
 
-  if (index > current.length) {
-    index = 0;
-    count = (count + 1) % texts.length;
-    setTimeout(type, 1500);
+  document.getElementById("typing").textContent = letter;
+
+  if (letter.length === currentText.length) {
+    setTimeout(() => {
+      index = 0;
+      count++;
+      type();
+    }, 1500); // pause without deleting (smooth)
   } else {
-    setTimeout(type, 40);
+    setTimeout(type, 40); // faster typing = smoother
   }
 }
 

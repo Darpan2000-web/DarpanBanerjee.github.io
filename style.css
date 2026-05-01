@@ -74,3 +74,6 @@ section {
   background: #1e293b;
   border-radius: 8px;
 }
+#typing {
+  min-height: 50px;
+}

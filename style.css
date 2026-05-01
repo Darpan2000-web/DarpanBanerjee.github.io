@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+}
+
+nav a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  color: #38bdf8;
+}
+
+.btn {
+  padding: 12px 25px;
+  background: #38bdf8;
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+section {
+  padding: 60px 50px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card: hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.1);
+}
+
+.skills span {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  background: #1e293b;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}

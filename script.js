@@ -62,3 +62,47 @@ function calculateDuration() {
 }
 
 calculateDuration();
+
+
+async function updateVisitorCount() {
+  const namespace = "darpanportfolio123"; // unique name
+  const key = "visits";
+
+  try {
+    const res = await fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`, {
+      method: "GET",
+      headers: {
+        "Accept": "application/json"
+      }
+    });
+
+    if (!res.ok) throw new Error("API failed");
+
+    const data = await res.json();
+    animateCounter(data.value);
+
+  } catch (err) {
+    console.error(err);
+    document.getElementById("visitor-count").textContent = "0";
+  }
+}
+
+// Smooth animation effect
+function animateCounter(target) {
+  let count = 0;
+  const speed = 20;
+
+  const update = () => {
+    if (count < target) {
+      count += Math.ceil(target / 50);
+      document.getElementById("visitor-count").textContent = count;
+      setTimeout(update, speed);
+    } else {
+      document.getElementById("visitor-count").textContent = target;
+    }
+  };
+
+  update();
+}
+
+updateVisitorCount();

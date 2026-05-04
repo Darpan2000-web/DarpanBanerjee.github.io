@@ -65,27 +65,23 @@ calculateDuration();
 
 
 async function updateVisitorCount() {
-  const namespace = "darpanportfolio123"; // unique name
+  const namespace = "darpan-portfolio-2026"; // change once and keep it
   const key = "visits";
 
   try {
-    const res = await fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`, {
-      method: "GET",
-      headers: {
-        "Accept": "application/json"
-      }
-    });
-
-    if (!res.ok) throw new Error("API failed");
-
+    const res = await fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
     const data = await res.json();
-    animateCounter(data.value);
+
+    // DIRECT UPDATE (no animation)
+    document.getElementById("visitor-count").textContent = data.value;
 
   } catch (err) {
     console.error(err);
     document.getElementById("visitor-count").textContent = "0";
   }
 }
+
+updateVisitorCount();
 
 // Smooth animation effect
 function animateCounter(target) {

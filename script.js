@@ -64,41 +64,50 @@ function calculateDuration() {
 calculateDuration();
 
 
+// REAL VISITOR COUNTER (FINAL VERSION)
 async function updateVisitorCount() {
-  const namespace = "darpan-portfolio-2026"; // change once and keep it
-  const key = "visits";
+  const counterElement = document.getElementById("visitor-count");
+
+  // Prevent multiple counts in same session
+  if (sessionStorage.getItem("visited")) {
+    return;
+  }
+
+  sessionStorage.setItem("visited", "true");
 
   try {
-    const res = await fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
+    const res = await fetch("https://api.counterapi.dev/v1/darpan-portfolio/visits/up");
     const data = await res.json();
 
-    // DIRECT UPDATE (no animation)
-    document.getElementById("visitor-count").textContent = data.value;
+    animateCounter(data.count); // use animation properly
 
   } catch (err) {
     console.error(err);
-    document.getElementById("visitor-count").textContent = "0";
+    counterElement.textContent = "0";
   }
 }
 
-updateVisitorCount();
 
-// Smooth animation effect
+// SMOOTH ANIMATION
 function animateCounter(target) {
-  let count = 0;
-  const speed = 20;
+  const element = document.getElementById("visitor-count");
+
+  let current = 0;
+  const increment = Math.ceil(target / 50);
 
   const update = () => {
-    if (count < target) {
-      count += Math.ceil(target / 50);
-      document.getElementById("visitor-count").textContent = count;
-      setTimeout(update, speed);
+    if (current < target) {
+      current += increment;
+      element.textContent = current;
+      requestAnimationFrame(update);
     } else {
-      document.getElementById("visitor-count").textContent = target;
+      element.textContent = target;
     }
   };
 
   update();
 }
 
-updateVisitorCount();
+
+// RUN ONLY ONCE
+document.addEventListener("DOMContentLoaded", updateVisitorCount);

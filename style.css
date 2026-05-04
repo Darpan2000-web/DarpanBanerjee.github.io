@@ -451,3 +451,33 @@ contact a {
   }
 
 }
+
+
+
+/* VISITOR CARD */
+.visitor-card {
+  background: rgba(30, 41, 59, 0.6);
+  padding: 15px 25px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.3s;
+}
+
+.visitor-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(99,102,241,0.4);
+}
+
+.visitor-card h3 {
+  color: #38bdf8;
+  font-size: 16px;
+}
+
+.visitor-card p {
+  font-size: 20px;
+  color: #a78bfa;
+  font-weight: bold;
+  margin-top: 5px;
+}
